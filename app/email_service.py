@@ -8,7 +8,7 @@ load_dotenv() #looks in the ".env" file for env vars
 SENDGRID_SENDER_ADDRESS = os.getenv("SENDGRID_SENDER_ADDRESS")
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
-print(API_KEY)
+print(SENDGRID_API_KEY)
 
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
