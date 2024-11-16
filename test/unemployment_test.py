@@ -1,4 +1,4 @@
-from app.unemployment import fetch_unemployment_json
+from app.unemployment_report import fetch_unemployment_json
 
 
 def test_data_fetching():
