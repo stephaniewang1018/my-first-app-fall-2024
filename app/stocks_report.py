@@ -17,6 +17,8 @@ def fetch_stocks_csv(symbol):
     df = read_csv(request_url)
     return df
 
+
+
 if __name__ == "__main__":
     
     # SELECT A SYMBOL
