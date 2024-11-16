@@ -21,7 +21,7 @@ def fetch_stocks_csv(symbol):
 
 
 from app.alpha_service import API_KEY
-
+from app.email_service import send_email_with_sendgrid
 
 def fetch_stocks_csv(symbol):
     request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&outputsize=full&datatype=csv"
@@ -111,3 +111,9 @@ if __name__ == "__main__":
                 title=f"Stock Prices ({symbol})",
             labels= {"x": "Date", "y": "Stock Price ($)"})
     fig.show()
+
+    #send email 
+    latest_price = first_row['adjusted_close']
+    send_email_with_sendgrid(subject="Stocks Report",
+        html_content="Latest price for {symbol} is {latest_price}"
+        )
