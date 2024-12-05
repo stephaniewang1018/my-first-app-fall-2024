@@ -1,6 +1,6 @@
 # this is the "web_app/__init__.py" file...
 
-web
+
 
 import os 
 from flask import Flask
