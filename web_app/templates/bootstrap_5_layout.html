@@ -42,6 +42,7 @@
     {% set nav_links = [
         ('/about', 'about', 'About'),
         ('/hello', 'hello', 'Hello'),
+        ('/unemployment/dashboard', 'unemployment_dashboard', 'Unemployment Dashboard'),
         ('/stocks/form', 'stocks_form', 'Stocks Form'),
     ] -%}
     {% set active_page = active_page|default('home') -%}
@@ -53,7 +54,7 @@
                     ICONS
                     https://icons.getbootstrap.com/
                 -->
-                <i class="bi-globe" style="font-size: 1.7rem; color: white;"></i>
+                <i class="bi bi-droplet" style="font-size: 1.7rem; color: white;"></i>
                 &nbsp;
                 My Web App
             </a>
