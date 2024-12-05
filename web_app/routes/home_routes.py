@@ -71,14 +71,10 @@ def about():
 def hello_world():
     print("HELLO...")
 
-    # if the request contains url params,
-    # for example a request to "/hello?name=Harper"
-    # the request.args property will hold the values in a dictionary-like structure
-    # can be empty like {} or full of params like {"name":"Harper"}
+    
     url_params = dict(request.args)
     print("URL PARAMS:", url_params)
 
-    # access "name" key if present, otherwise use default value
     name = url_params.get("name") or "World"
 
     message = f"Hello, {name}!"
